@@ -1,6 +1,6 @@
 {
   "name": "liu_qihao",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "一个验证的数字格式 千分符 百分号 ts",
   "main": "lib/index.js",
   "scripts": {
@@ -24,5 +24,8 @@
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
   },
+  "files": [
+    "lib"
+  ],
   "types": "lib/index.d.ts"
 }
