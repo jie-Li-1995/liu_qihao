@@ -8,10 +8,6 @@ test('addPercent', () => {
   expect($ccw.addPercent(0.98224)).toBe('98.22%')
 })
 
-test('deleteThousand', () => {
-  expect($ccw.deleteThousand(0.98224)).toBe('98.22%')
-})
-
 test('delPercent', () => {
   expect($ccw.delPercent('98.22%')).toBe(0.9822)
 })
