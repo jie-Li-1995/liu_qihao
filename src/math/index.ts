@@ -28,7 +28,7 @@ export function addThousand (point: number = 0): string {
 }
 
 export function deleteThousand (str: string = '0'): number {
-  let reg = new RegExp(/,/g)
+  const reg = new RegExp(/,/g)
   let a = str.toString().replace(reg, '')
   a = Number(a).toFixed(2)
   return Number(a)
@@ -61,8 +61,8 @@ export function getStrLen (val = ''): number {
   const str = val.toString()
   let len = 0
   if (str !== '' && str !== null && str !== undefined) {
-    for (var i = 0; i < str.length; i++) {
-      var c = str.charCodeAt(i)
+    for (let i = 0; i < str.length; i++) {
+      const c = str.charCodeAt(i)
       // 单字节加1
       if ((c >= 0x0001 && c <= 0x007e) || (c >= 0xff60 && c <= 0xff9f)) {
         len++
