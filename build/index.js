@@ -58,10 +58,9 @@ module.exports = {
         //   'ts-loader',
         // ],
         // 要排除的文件
-        loader: "ts-loader",
-        exclude: path.resolve(__dirname, "node_modules"),
-        include: path.resolve(__dirname, "src")
-      }
+        loader: "ts-loader"
+      },
+      { test: /\.css$/, use: 'css-loader' },
     ]
   },
   plugins: [
