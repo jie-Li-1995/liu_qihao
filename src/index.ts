@@ -1,5 +1,5 @@
-import { addPercent, delPercent, addThousand, deleteThousand, NumberRound, money, getStrLen } from './math'
-import { download, downloadFile } from './download'
+import { addPercent, delPercent, addThousand, deleteThousand, NumberRound, money, getStrLen } from './math/index'
+import { download, downloadFile } from './download/index'
 
 class ccw {
   addPercent: ((point: any) => string) | undefined
