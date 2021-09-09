@@ -1,4 +1,4 @@
-export function download (url: string, name = '', query = ''): void {
+export function download(url: string, name = '', query = ''): void {
   const link = document.createElement('a')
   link.style.display = 'none'
   if (query) {
@@ -12,7 +12,7 @@ export function download (url: string, name = '', query = ''): void {
   document.body.removeChild(link)
 }
 
-export function downloadFile (data: Blob, name: string, query = '') {
+export function downloadFile(data: Blob, name: string, query = '') {
   if ('msSaveOrOpenBlob' in navigator) {
     const blob = new Blob([data], { type: 'text/plain' })
     const url = window.navigator.msSaveOrOpenBlob(
