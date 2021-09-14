@@ -1,12 +1,12 @@
 {
   "name": "liu_qihao",
-  "version": "2.0.4",
+  "version": "2.1.4",
   "description": "一个验证的数字格式 千分符 百分号 ts",
-  "main": "build/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest --config jestconfig.json -w",
-    "replace": "tsc && npm publish",
-    "start": "tsc -w",
+    "replace": "npm publish",
+    "start": "tsc",
     "build": "webpack --config build/index.js"
   },
   "keywords": [
@@ -15,11 +15,11 @@
   "author": "liuqihao95",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
     "@types/jest": "^25.1.5",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
     "babel-loader": "^8.2.2",
-    "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^4.0.0",
     "jest": "^25.2.7",
     "prettier": "^2.0.2",
@@ -33,6 +33,11 @@
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
+    "core-js": "^3.17.3",
     "css-loader": "^6.2.0"
-  }
+  },
+  "files": [
+    "lib"
+  ],
+  "types": "lib/index.d.ts"
 }
