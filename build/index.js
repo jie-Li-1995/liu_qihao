@@ -7,7 +7,7 @@ module.exports = {
   mode: 'development',
   entry: path.resolve(__dirname, '/src/index.ts'),
   output: {
-    filename: '[name].js',
+    filename: 'index.js',
     path: path.resolve(__dirname, '../lib'),
   },
   module: {
@@ -33,12 +33,11 @@ module.exports = {
           {
             loader: 'ts-loader',
             options: {
-              configFile: path.resolve(__dirname, 'tsconfig.json'),
+              configFile: path.resolve(__dirname, '../tsconfig.json'),
             },
           },
         ],
-        exclude: path.resolve(__dirname, "node_modules"),
-        include: path.resolve(__dirname, "src")
+        exclude: path.resolve(__dirname, "node_modules")
       },
       { test: /\.css$/, use: 'css-loader' },
     ]

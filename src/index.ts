@@ -1,5 +1,14 @@
-import { addPercent, delPercent, addThousand, deleteThousand, NumberRound, money, getStrLen } from './math/index'
-import { download, downloadFile } from './download/index'
+import {
+  addPercent,
+  delPercent,
+  addThousand,
+  deleteThousand,
+  NumberRound,
+  money,
+  getStrLen,
+} from './math'
+
+import { download, downloadFile } from './download'
 
 // interface Ccw {
 //   addPercent: ((point: any) => string) | undefined
@@ -22,7 +31,7 @@ const $ccw = {
   NumberRound,
   download,
   downloadFile,
-  getStrLen
+  getStrLen,
 }
 
 export default $ccw
