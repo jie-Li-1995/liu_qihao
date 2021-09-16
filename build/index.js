@@ -13,10 +13,8 @@ module.exports = {
     environment: {
       arrowFunction: false,
     },
-    library: {
-      name: '$ccw',
-      type: 'commonjs',
-    }
+    libraryExport: 'default',
+    libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
