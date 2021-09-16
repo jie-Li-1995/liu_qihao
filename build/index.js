@@ -16,7 +16,7 @@ module.exports = {
     library: {
       name: '$ccw',
       type: 'commonjs',
-    },
+    }
   },
   module: {
     rules: [

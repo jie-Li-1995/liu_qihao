@@ -20,3 +20,4 @@ npm i liu_qihao
 #### copyToBoard 复制到剪切板
 #### uniqueArray 数组去重
 #### cleanObject 删除为空字段 search 时候用
+#### cleanNull

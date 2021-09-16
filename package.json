@@ -1,6 +1,6 @@
 {
   "name": "liu_qihao",
-  "version": "2.1.10",
+  "version": "2.2.01",
   "description": "一个验证的数字格式 千分符 百分号 ts",
   "main": "lib/index.js",
   "scripts": {
