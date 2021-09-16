@@ -2,36 +2,34 @@ import {
   addPercent,
   delPercent,
   addThousand,
-  deleteThousand,
-  NumberRound,
+  delThousand,
+  numberRound,
   money,
   getStrLen,
 } from './math'
 
 import { download, downloadFile } from './download'
 
-// interface Ccw {
-//   addPercent: ((point: any) => string) | undefined
-//   delPercent: ((point?: string) => number) | undefined
-//   addThousand: ((point?: number) => string) | undefined
-//   deleteThousand: ((str?: string) => number) | undefined
-//   money: ((value: string | number, currency?: string, decimals?: number) => string) | undefined
-//   NumberRound: ((point?: number) => number) | undefined
-//   download: ((url: string, name?: string, query?: string) => void) | undefined
-//   downloadFile: ((data: Blob, name: string, query?: string) => void) | undefined
-//   getStrLen: ((val: string) => number) | undefined
-// }
+import { awaitWrap } from './fatch'
+
+import { deepCopy, uniqueArray, copyToBoard, cleanObject, cleanNull } from './common'
 
 const $ccw = {
   addPercent,
   delPercent,
   addThousand,
-  deleteThousand,
+  delThousand,
   money,
-  NumberRound,
+  numberRound,
   download,
   downloadFile,
   getStrLen,
+  awaitWrap,
+  deepCopy,
+  uniqueArray,
+  copyToBoard,
+  cleanObject,
+  cleanNull,
 }
 
 export default $ccw

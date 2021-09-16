@@ -1,14 +1,14 @@
-export function addPercent(point: any): string {
-  let newPoint = point.toString()
+export function addPercent (point: number | string): string {
+  let newPoint: string = typeof point === 'number' ? point.toString() : point
   newPoint = /^[0-9]+.?[0-9]*$/.test(newPoint) ? newPoint : '0'
   if (newPoint === '0') {
     return '0%'
   } else {
-    return (Math.round((newPoint * 10000)) / 100.00).toFixed(2) + '%'
+    return (Math.round((Number(newPoint) * 10000)) / 100.00).toFixed(2) + '%'
   }
 }
 
-export function delPercent(point: string = '0%'): number {
+export function delPercent (point: string = '0%'): number {
   const reg = new RegExp('%')
   let newPoint = point.toString().replace(reg, '')
   const arr = newPoint.split('.')
@@ -16,7 +16,7 @@ export function delPercent(point: string = '0%'): number {
   return Number(newPoint)
 }
 
-export function addThousand(point: number = 0): string {
+export function addThousand (point: number = 0): string {
   const newPoint = point.toFixed(2)
   const arr = newPoint.split('.')
   if (arr.length === 2) {
@@ -26,14 +26,14 @@ export function addThousand(point: number = 0): string {
   }
 }
 
-export function deleteThousand(str: string = '0'): number {
+export function delThousand (str: string = '0'): number {
   const reg = new RegExp(/,/g)
   let a = str.toString().replace(reg, '')
   a = Number(a).toFixed(2)
   return Number(a)
 }
 
-export function NumberRound(point: number = 0): number {
+export function numberRound (point: number = 0): number {
   if (point >= 0) {
     return Math.round(point)
   } else {
@@ -41,7 +41,7 @@ export function NumberRound(point: number = 0): number {
   }
 }
 
-export function money(value: string | number, currency = '$', decimals = 2) {
+export function money (value: string | number, currency = '$', decimals = 2) {
   const digitsRE = /(\d{3})(?=\d)/g
   if (typeof value === 'string') {
     value = parseFloat(value)
@@ -56,7 +56,7 @@ export function money(value: string | number, currency = '$', decimals = 2) {
   return sign + currency + head + _int.slice(i).replace(digitsRE, '$1,') + _float
 }
 
-export function getStrLen(val = ''): number {
+export function getStrLen (val = ''): number {
   const str = val.toString()
   let len = 0
   if (str !== '' && str !== null && str !== undefined) {

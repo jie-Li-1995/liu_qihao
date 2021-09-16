@@ -1,7 +1,7 @@
 import $ccw from '../index'
 
 test('My Greeter', () => {
-  expect($ccw.NumberRound(-100)).toBe(-100)
+  expect($ccw.numberRound(-100)).toBe(-100)
 })
 
 test('addPercent', () => {
@@ -13,10 +13,14 @@ test('delPercent', () => {
 })
 
 test('getStrLen', () => {
-  expect($ccw.getStrLen('中国任命')).toBe(6)
+  expect($ccw.getStrLen('中国任命')).toBe(8)
 })
 
 test('money2', () => {
   expect($ccw.money('-10222220.567', '')).toBe('-10,222,220.57')
+})
+
+test('cleanNull', () => {
+  expect($ccw.cleanNull({ name: null, age: undefined })).toEqual({ name: '', age: '' })
 })
 // 最常用的代码: expect(变量).toEqual(期待值);
