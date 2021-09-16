@@ -7,11 +7,15 @@ module.exports = {
   mode: 'development',
   entry: path.resolve(__dirname, '/src/index.ts'),
   output: {
-    filename: '[name].js',
+    filename: 'index.js',
     path: path.resolve(__dirname, '../lib'),
     // 配置打包输出环境，不使用箭头函数
     environment: {
       arrowFunction: false,
+    },
+    library: {
+      name: '$ccw',
+      type: 'commonjs',
     },
   },
   module: {

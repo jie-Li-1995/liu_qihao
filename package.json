@@ -1,13 +1,13 @@
 {
   "name": "liu_qihao",
-  "version": "2.1.4",
+  "version": "2.1.10",
   "description": "一个验证的数字格式 千分符 百分号 ts",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest --config jestconfig.json -w",
     "replace": "npm publish",
     "start": "tsc",
-    "build": "webpack --config build/index.js"
+    "build": "webpack --config build/index.js --mode=production"
   },
   "keywords": [
     "typescript"
