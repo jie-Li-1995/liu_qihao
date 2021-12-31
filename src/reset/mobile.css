@@ -3,3 +3,5 @@ a,img,input {border:none;}
 body{font: 14px/1.75 -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;}
 a {text-decoration:none;}
 ul,li{list-style: none}
+img{vertical-align: top;}
+.flex{display: flex;}
